@@ -45,6 +45,8 @@ class RequestSend:
         return dict1
 
     def ReSend(self, url, method, **kwargs):
-        return self.api(self, url, method=method,**kwargs)
+        return self.api(self, url, method=method, **kwargs)
+
+
 if __name__ == '__main__':
     pass
