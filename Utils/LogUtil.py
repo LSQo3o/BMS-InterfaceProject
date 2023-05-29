@@ -62,4 +62,4 @@ class LogUtil:
 logger = LogUtil().log()
 
 if __name__ == '__main__':
-    logger.debug("这是第二条测试日志")
+    logger.debug("这是一条测试日志")
