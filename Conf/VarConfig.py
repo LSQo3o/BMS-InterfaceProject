@@ -14,7 +14,7 @@ DataPath = BASE_DIR + "/Data"  # /Users/qiutiao/BMS-Interface/Data
 # DataPath = BASE_DIR + os.sep + "Data" # /Users/qiutiao/BMS-Interface/Data 另一种方法
 
 # 测试报告目录
-ReportsPath = BASE_DIR + "/Reports"
+ReportsPath = BASE_DIR + "/reports"
 
 # 测试数据目录
 LogPath = BASE_DIR + "/Log"

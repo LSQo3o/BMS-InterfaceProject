@@ -2,7 +2,7 @@ import logging
 import os.path
 import time
 
-from Conf.VarConfig import ReportsPath
+from Conf.VarConfig import LogPath
 
 """
 指定日志的输出格式format，这个参数可以输出很多有用的信息，如下:
@@ -34,7 +34,7 @@ class LogUtil:
         # 日志名称
         self.log_name = "{}.log".format(time.strftime("%Y_%m_%d", time.localtime()))
         # 日志路径
-        self.log_path_file = ReportsPath + "/" + self.log_name
+        self.log_path_file = LogPath + "/" + self.log_name
 
         # 第二步 创建一个handler，用于写入日志文件
         file_handler = logging.FileHandler(self.log_path_file, encoding="utf-8", mode="w")  # open的打开模式这里可以进行参考
