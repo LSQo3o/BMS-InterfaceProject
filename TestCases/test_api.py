@@ -21,5 +21,6 @@ def test_login_out():
     print("login out...")
 
 
+# 打印测试报告 pytest-html
 if __name__ == '__main__':
     pytest.main(["-s", "-v", "test_api.py", "--html=../reports/report.html"])
