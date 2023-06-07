@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 @Project ：BMS-Interface 
-@File    ：requests库.py
+@File    ：requests库-get请求.py
 @IDE     ：PyCharm 
 @Author  ：四七
 @Date    ：2023/6/6 23:10 
@@ -18,7 +18,8 @@ headers = {"Accept": "json", "token": "111"}
 # res = requests.get(url=url,headers=headers)
 # print(res.text)
 
-# 带参数
+# 带请求参数
 params = {"id": "2", "name": "tester"}
 res = requests.get(url=url, headers=headers, params=params)
 print(res.text)
+
