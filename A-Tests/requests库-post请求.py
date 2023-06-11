@@ -18,12 +18,12 @@ headers = {"token": "123456"}
 # res = requests.post(url=url, headers=headers)
 # print(res.text)
 
-# 带参数 表单形式 "Content-Type": "application/x-www-form-urlencoded"，关键字是data
+# 带参数 表单形式 "Content-Type": "application/x-www-form-urlencoded",关键字是data
 data = {"username": "admin", "password": "123456"}
 # res = requests.post(url=url, headers=headers,data=data)
 # print(res.text)
 
-# 带参数 json形式 "Content-Type": "application/json" 关键字是json
+# 带参数 json形式 "Content-Type": "application/json",关键字是json
 # res = requests.post(url=url, headers=headers, json=data)
 # print(res.text)
 
@@ -37,15 +37,19 @@ file = {"file1": open("2023_05_28.log", "rb")}
 # print(res.text)
 
 # encoding
-res = requests.get(url=url, headers=headers, params=data, files=file)
-print(res.encoding)  # utf-8
-res.encoding = "ISO-8859-1"
-print(res.text)  # 是个字符串
-print(type(res.text))
-print(res.encoding)  # ISO-8859-1
+res = requests.post(url=url, headers=headers, data=data)
+# print(res.encoding)  # 获取响应结果编码格式 utf-8
+# res.encoding = "ISO-8859-1"  # 更改编码格式
+# print(res.encoding)  # ISO-8859-1
 
-print(res.json())  # 是个字典类型 是可以转换成json的
+# print(res.text)
+# print(type(res.text))  # 为字符串类型
 
-print(res.status_code) # 获取响应状态码
+print(res.json())
+print(type(res.json()))  # 为字典类型 是可以转换成json的
 
-print(res.headers["Content-Type"]) # 响应头
+# print(res.status_code)  # 获取响应状态码
+
+print(res.headers)  # 获取响应头
+print(type(res.headers))
+print(res.headers["Content-Type"])  # 字典方法取值

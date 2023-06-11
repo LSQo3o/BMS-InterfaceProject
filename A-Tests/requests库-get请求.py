@@ -18,7 +18,7 @@ headers = {"Accept": "json", "token": "111"}
 # res = requests.get(url=url,headers=headers)
 # print(res.text)
 
-# 带请求参数
+# 带请求参数 关键字是params
 params = {"id": "2", "name": "tester"}
 res = requests.get(url=url, headers=headers, params=params)
 print(res.text)
