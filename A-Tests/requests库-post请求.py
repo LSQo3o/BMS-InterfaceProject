@@ -48,7 +48,7 @@ res = requests.post(url=url, headers=headers, data=data)
 print(res.json())
 print(type(res.json()))  # 为字典类型 是可以转换成json的
 
-# print(res.status_code)  # 获取响应状态码
+print(res.status_code)  # 获取响应状态码
 
 print(res.headers)  # 获取响应头
 print(type(res.headers))
