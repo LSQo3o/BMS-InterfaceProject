@@ -6,6 +6,8 @@
 @Author  ：四七
 @Date    ：2023/6/7 22:44 
 """
+import json
+
 import requests
 
 # 发送post请求
@@ -43,13 +45,14 @@ res = requests.post(url=url, headers=headers, data=data)
 # print(res.encoding)  # ISO-8859-1
 
 # print(res.text)
-# print(type(res.text))  # 为字符串类型
+# print(type(res.text))  # 类型为字符串
 
 print(res.json())
-print(type(res.json()))  # 为字典类型 是可以转换成json的
+print(type(res.json()))  # 类型为字典 是可以转换成json的
+# print(json.dump(res.json()))
 
 print(res.status_code)  # 获取响应状态码
 
 print(res.headers)  # 获取响应头
-print(type(res.headers))
+print(type(res.headers))  # 类型为requests.structures.CaseInsensitiveDict
 print(res.headers["Content-Type"])  # 字典方法取值

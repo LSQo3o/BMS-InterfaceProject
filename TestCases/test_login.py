@@ -22,9 +22,13 @@ argvalues = get_test_data("login")
 def test_login(project, module, caseid, casename, description, url, method, headers, data, content_type, assertres):
     # requestsUtil = RequestUtil()
     try:
+        headers = eval(headers)
+        data = eval(data)
+        # headers = eval(headers) if headers else headers
+        # data = eval(data) if data else data
+        res = RequestUtil().api_requests(url=url, method=method, headers=headers, data=data, content_type=content_type)
 
-        print(RequestUtil().api_requests(url=url, method=method, headers=headers, data=data, content_type=content_type))
-    # print(res)
+        print(res, type(res))
     except Exception as e:
         print(e)
 

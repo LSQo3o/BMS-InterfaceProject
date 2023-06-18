@@ -1,0 +1,5 @@
+2023-06-18 17:21:06,000 - RequestUtil.py[line:20] - INFO: 请求的URL为http://httpbin.org/post,类型为<class 'str'>
+2023-06-18 17:21:06,000 - RequestUtil.py[line:21] - INFO: 请求的Method为post,类型为<class 'str'>
+2023-06-18 17:21:06,000 - RequestUtil.py[line:22] - INFO: 请求的Data为{'username': 'admin', 'password': '123456'},类型为<class 'dict'>
+2023-06-18 17:21:06,000 - RequestUtil.py[line:23] - INFO: 请求的Headers为{'Content-Type': 'application/json'},类型为<class 'dict'>
+2023-06-18 17:21:06,000 - RequestUtil.py[line:24] - INFO: 请求的Cookies为None,类型为<class 'NoneType'>
