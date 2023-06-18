@@ -17,11 +17,11 @@ class RequestUtil:
     def api_requests(self, url, method, data=None, headers=None, cookies=None, content_type=None):
         # 定义变量，获取响应结果
         # 打印日志
-        logger.info("请求的URL为{},类型为{}".format(url, type(url)))
-        logger.info("请求的Method为{},类型为{}".format(method, type(method)))
-        logger.info("请求的Data为{},类型为{}".format(data, type(data)))
-        logger.info("请求的Headers为{},类型为{}".format(headers, type(headers)))
-        logger.info("请求的Cookies为{},类型为{}".format(cookies, type(cookies)))
+        # logger.info("请求的URL为{},类型为{}".format(url, type(url)))
+        # logger.info("请求的Method为{},类型为{}".format(method, type(method)))
+        # logger.info("请求的Data为{},类型为{}".format(data, type(data)))
+        # logger.info("请求的Headers为{},类型为{}".format(headers, type(headers)))
+        # logger.info("请求的Cookies为{},类型为{}".format(cookies, type(cookies)))
         try:
             # 请求方法为get，关键字是data
             if method.lower() == "get":

@@ -6,3 +6,28 @@
 @Author  ：四七
 @Date    ：2023/6/11 11:05 
 """
+import pytest
+
+from Utils.ExcelUtil import get_row_values, get_test_data
+from Utils.RequestUtil import RequestUtil
+
+# 数据从Excel中取
+argnames = get_row_values("login", 1)
+argvalues = get_test_data("login")
+
+
+# argvalues = ["http://httpbin.org/post", "post", "None", "None", "None", "None"] 这种格式是错的，外面不该加[]
+
+@pytest.mark.parametrize(argnames, argvalues)
+def test_login(project, module, caseid, casename, description, url, method, headers, data, content_type, assertres):
+    # requestsUtil = RequestUtil()
+    try:
+
+        print(RequestUtil().api_requests(url=url, method=method, headers=headers, data=data, content_type=content_type))
+    # print(res)
+    except Exception as e:
+        print(e)
+
+
+if __name__ == '__main__':
+    pytest.main(["-s", "test_login.py"])

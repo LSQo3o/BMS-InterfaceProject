@@ -16,6 +16,6 @@ DataPath = BASE_DIR + "/Data"  # /Users/qiutiao/BMS-Interface/Data
 # 测试报告目录
 ReportsPath = BASE_DIR + "/reports"
 
-# 测试数据目录
+# 测试日志目录
 LogPath = BASE_DIR + "/Log"
 # print(LogPath)
