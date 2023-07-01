@@ -22,8 +22,10 @@ argvalues = get_test_data("login")
 def test_login(project, module, caseid, casename, description, url, method, headers, data, content_type, assertres):
     # requestsUtil = RequestUtil()
     try:
+        print(type(headers), type(data))
         headers = eval(headers)  # TODO：研究下为什么此处不能直接用dict转换成字典呢？
         data = eval(data)
+        print(type(headers), type(data))
         # headers = eval(headers) if headers else headers
         # data = eval(data) if data else data
         res = RequestUtil().api_requests(url=url, method=method, headers=headers, data=data, content_type=content_type)
@@ -31,6 +33,7 @@ def test_login(project, module, caseid, casename, description, url, method, head
         print(res, type(res))
     except Exception as e:
         print(e)
+
 
 # 断言
 
