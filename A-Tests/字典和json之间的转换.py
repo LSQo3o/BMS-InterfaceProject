@@ -7,6 +7,7 @@
 @Date    ：2023/6/18 17:52 
 """
 import json
+
 """
 1.json.dumps() 将Python字典类型转换为 JSON 对象, json.loads()将json格式转换成python字典类型
 2.json中除数据即数字外，key和value都是字符串，要用双引号引起来；空值为null；布尔值为false/true(小写);
@@ -14,6 +15,6 @@ import json
 """
 dict1 = {'username': 'admin', 'password': '123456'}
 json1 = json.dumps(dict1)
-print(json1)
+print(json1)  # 双引号
 dict2 = json.loads(json1)
-print(dict2)
+print(dict2)  # 单引号

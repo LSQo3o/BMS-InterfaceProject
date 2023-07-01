@@ -15,7 +15,6 @@ from Utils.LogUtil import logger
 class RequestUtil:
     # 封装requests请求函数
     def api_requests(self, url, method, data=None, headers=None, cookies=None, content_type=None):
-        # 定义变量，获取响应结果
         # 打印日志
         logger.info("请求的URL为{},类型为{}".format(url, type(url)))
         logger.info("请求的Method为{},类型为{}".format(method, type(method)))
